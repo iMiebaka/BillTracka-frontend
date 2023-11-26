@@ -1,10 +1,7 @@
-import { useState } from "react";
 import ICONS from "../../assets/icons";
-import { TranasactionType } from "../../components";
 import IMAGES from "../../assets/images";
 
 function Task() {
-  const [toggleVisible, setToggleVisible] = useState(false);
   return (
     <div className="h-screen">
       <div className="mx-[2%]">
@@ -22,7 +19,8 @@ function Task() {
             <button>Completed</button>
           </div>
           <button>
-            <img className="mx-3" src={ICONS.search} alt="" />
+            {" "}
+            <img className="m-3" src={ICONS.search} alt="" />
           </button>
         </section>
         <section>

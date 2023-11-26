@@ -7,7 +7,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="" element={<homePage.LandingPage />}>
-          <Route path="" element={<homePage.Task />} />
+          <Route path="" element={<homePage.Invoice />} />
         </Route>
       </Routes>
     </BrowserRouter>

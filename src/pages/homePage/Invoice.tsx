@@ -27,7 +27,7 @@ function Invoice() {
         </section>
         <section>
           <div className="flex flex-col h-[400px] justify-center items-center">
-            <img width={60} height={83} src={IMAGES.reciept} alt="" />
+            <img width={106} height={133} src={IMAGES.reciept} alt="" />
             <p className="text-center mx-6">
               No Invoice Available. Click on the plus (+) icon to create one
             </p>

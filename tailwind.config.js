@@ -5,9 +5,11 @@ export default {
     extend: {
       colors: {
         primary: "#0515F6",
+        masterGrey: "#333333"
       },
       backgroundColor: {
         primary: "#0515F6",
+        masterGrey: "#333333"
       },
     },
   },

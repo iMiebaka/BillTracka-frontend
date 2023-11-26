@@ -29,7 +29,7 @@ function Home() {
           <div>
             <p className="text-sm font-medium flex items-center text-gray-600">
               Total Sales
-              <button onClick={() => setToggleVisible((pre) => !pre)}>
+              <button>
                 <img className="px-5 flex" src={ICONS.eyeClosed} alt="" />
               </button>
             </p>

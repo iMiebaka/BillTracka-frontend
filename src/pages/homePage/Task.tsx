@@ -3,74 +3,34 @@ import ICONS from "../../assets/icons";
 import { TranasactionType } from "../../components";
 import IMAGES from "../../assets/images";
 
-function Home() {
+function Task() {
   const [toggleVisible, setToggleVisible] = useState(false);
   return (
     <div className="h-screen">
       <div className="mx-[2%]">
         <div className="mt-9 flex justify-between items-center">
-          <div>
-            <h2 className="flex gap-2 font-normal text-gray-700">
-              Welcome back
-            </h2>
-            <p className="font-medium text-gray-600">Blessing Ventures</p>
-          </div>
-          <div className="flex gap-2">
-            <button>
-              <img src={ICONS.message} alt="" />
-            </button>
-            <button>
-              <img src={ICONS.bell} alt="" />
-            </button>
-          </div>
+          <h2 className="font-medium text-lg text-gray-700">Tasks</h2>
+          <button>
+            <img src={ICONS.add} alt="" />
+          </button>
         </div>
 
-        <section className="border flex justify-between p-2 rounded mt-5">
-          <div>
-            <p className="text-sm font-medium flex items-center text-gray-600">
-              Total Sales
-              <button onClick={() => setToggleVisible((pre) => !pre)}>
-                <img className="px-5 flex" src={ICONS.eyeClosed} alt="" />
-              </button>
+        <section className="flex justify-between mt-2">
+          <div className="flex text-masterGrey text-xs font-medium gap-3 bg-[#E6E8FE] flex-1 p-2 rounded-md">
+            <button className="text-blue-600 bg-white p-2 rounded-md">All</button>
+            <button>To-do</button>
+            <button>Completed</button>
+          </div>
+          <button>
+            <img className="mx-3" src={ICONS.search} alt="" />
+          </button>
+        </section>
+        <section>
+          <div className="flex flex-col h-[400px] justify-center items-center">
+            <img width={60} height={83} src={IMAGES.clipboard} alt="" />
+            <p className="text-center mx-6">
+              No Task Available. Click on the plus (+) icon to create one
             </p>
-            <h3 className="font-semibold text-2xl mt-3">0.00</h3>
-          </div>
-          <div className="flex flex-col">
-            <select className="p-0.5 bg-slate-100" name="" id="">
-              <option value="">This week</option>
-            </select>
-            <button className="mt-3 text-end underline  ">Analytics</button>
-          </div>
-        </section>
-
-        <section className="mt-4">
-          <TranasactionType
-            amount={0.0}
-            invoice={0}
-            style="Paid"
-            color="green"
-          />
-          <TranasactionType
-            amount={0.0}
-            invoice={0}
-            style="Unpaid"
-            color="blue"
-          />
-          <TranasactionType
-            amount={0.0}
-            invoice={0}
-            style="Overdue"
-            color="red"
-          />
-        </section>
-        <section className="mt-4">
-          <p className="font-medium">Recent Transaction</p>
-
-          <div className="flex justify-center items-center mt-10">
-            <div className="flex flex-col items-center">
-              <img className="w-[125px]" src={IMAGES.transactions} alt="" />
-              <p className="mt-2 ">Not transactions Available</p>
-            </div>
           </div>
         </section>
       </div>
@@ -78,4 +38,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Task;

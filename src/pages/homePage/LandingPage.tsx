@@ -1,6 +1,8 @@
 import { Outlet } from "react-router-dom";
 import { HomeFooter } from "../../components";
-function HomePage() {
+
+
+function LandingPage() {
   return (
     <div className="relative">
       <Outlet />
@@ -10,4 +12,4 @@ function HomePage() {
   );
 }
 
-export default HomePage;
+export default LandingPage;

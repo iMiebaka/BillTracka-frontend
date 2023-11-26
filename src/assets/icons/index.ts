@@ -12,6 +12,10 @@ import homeFill from "./bottomNavigator/home-fill.svg";
 import bell from "./bell.svg";
 import message from "./message.svg"
 import invoice from "./invoice.svg"
+import add from "./add.svg"
+import search from "./search.svg"
+
+
 
 const ICONS = {
   leftArrow,
@@ -27,7 +31,9 @@ const ICONS = {
   homeFill,
   bell,
   message,
-  invoice
+  invoice,
+  add,
+  search
 };
 
 export default ICONS;

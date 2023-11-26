@@ -538,10 +538,6 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
-.absolute{
-  position: absolute;
-}
-
 .relative{
   position: relative;
 }
@@ -566,6 +562,11 @@ video {
   margin: 0.75rem;
 }
 
+.mx-5{
+  margin-left: 1.25rem;
+  margin-right: 1.25rem;
+}
+
 .mx-\[2\%\]{
   margin-left: 2%;
   margin-right: 2%;
@@ -576,9 +577,19 @@ video {
   margin-bottom: 1.75rem;
 }
 
-.mx-5{
-  margin-left: 1.25rem;
-  margin-right: 1.25rem;
+.mx-10{
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
+}
+
+.mx-6{
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.mx-3{
+  margin-left: 0.75rem;
+  margin-right: 0.75rem;
 }
 
 .mt-1{
@@ -613,8 +624,8 @@ video {
   margin-top: 2.25rem;
 }
 
-.mb-10{
-  margin-bottom: 2.5rem;
+.ml-3{
+  margin-left: 0.75rem;
 }
 
 .flex{
@@ -645,8 +656,24 @@ video {
   height: 100vh;
 }
 
+.h-\[300px\]{
+  height: 300px;
+}
+
+.h-\[500px\]{
+  height: 500px;
+}
+
+.h-\[400px\]{
+  height: 400px;
+}
+
 .w-14{
   width: 3.5rem;
+}
+
+.w-\[125px\]{
+  width: 125px;
 }
 
 .w-\[271px\]{
@@ -657,20 +684,12 @@ video {
   width: 100%;
 }
 
-.w-\[125px\]{
-  width: 125px;
+.w-\[32px\]{
+  width: 32px;
 }
 
 .flex-1{
   flex: 1 1 0%;
-}
-
-.flex-none{
-  flex: none;
-}
-
-.flex-auto{
-  flex: 1 1 auto;
 }
 
 .flex-col{
@@ -683,10 +702,6 @@ video {
 
 .items-center{
   align-items: center;
-}
-
-.justify-start{
-  justify-content: flex-start;
 }
 
 .justify-end{
@@ -707,6 +722,10 @@ video {
 
 .gap-2{
   gap: 0.5rem;
+}
+
+.gap-3{
+  gap: 0.75rem;
 }
 
 .rounded{
@@ -755,14 +774,14 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.bg-red-100{
+.bg-slate-400{
   --tw-bg-opacity: 1;
-  background-color: rgb(254 226 226 / var(--tw-bg-opacity));
+  background-color: rgb(148 163 184 / var(--tw-bg-opacity));
 }
 
-.bg-red-600{
+.bg-\[\#E6E8FE\]{
   --tw-bg-opacity: 1;
-  background-color: rgb(220 38 38 / var(--tw-bg-opacity));
+  background-color: rgb(230 232 254 / var(--tw-bg-opacity));
 }
 
 .p-0{
@@ -827,6 +846,11 @@ video {
   line-height: 1.5rem;
 }
 
+.text-lg{
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
 .text-sm{
   font-size: 0.875rem;
   line-height: 1.25rem;
@@ -877,6 +901,21 @@ video {
 .text-white{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-masterGrey{
+  --tw-text-opacity: 1;
+  color: rgb(51 51 51 / var(--tw-text-opacity));
+}
+
+.text-blue-400{
+  --tw-text-opacity: 1;
+  color: rgb(96 165 250 / var(--tw-text-opacity));
+}
+
+.text-blue-600{
+  --tw-text-opacity: 1;
+  color: rgb(37 99 235 / var(--tw-text-opacity));
 }
 
 .underline{

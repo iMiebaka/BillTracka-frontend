@@ -1,12 +1,12 @@
 import ICONS from "../../assets/icons";
 import IMAGES from "../../assets/images";
 
-function Invoice() {
+function Client() {
   return (
     <div className="h-screen">
       <div className="mx-[2%]">
         <div className="mt-9 flex justify-between items-center">
-          <h2 className="font-medium text-lg text-gray-700">Invoice</h2>
+          <h2 className="font-medium text-lg text-gray-700">Client</h2>
           <button>
             <img src={ICONS.add} alt="" />
           </button>
@@ -27,9 +27,9 @@ function Invoice() {
         </section>
         <section>
           <div className="flex flex-col h-[400px] justify-center items-center">
-            <img width={60} height={83} src={IMAGES.reciept} alt="" />
+            <img width={118} height={150} src={IMAGES.mentions} alt="" />
             <p className="text-center mx-6">
-              No Invoice Available. Click on the plus (+) icon to create one
+              No Client Available. Click on the plus (+) icon to create one
             </p>
           </div>
         </section>
@@ -38,4 +38,4 @@ function Invoice() {
   );
 }
 
-export default Invoice;
+export default Client;

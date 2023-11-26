@@ -9,6 +9,9 @@ import more from "./bottomNavigator/more.svg";
 import taskFull from "./bottomNavigator/task-fill.svg";
 import clientFill from "./bottomNavigator/clients-fill.svg";
 import homeFill from "./bottomNavigator/home-fill.svg";
+import bell from "./bell.svg";
+import message from "./message.svg"
+import invoice from "./invoice.svg"
 
 const ICONS = {
   leftArrow,
@@ -22,6 +25,9 @@ const ICONS = {
   taskFull,
   clientFill,
   homeFill,
+  bell,
+  message,
+  invoice
 };
 
 export default ICONS;

@@ -35,7 +35,7 @@ function PhoneNumberLogin() {
           |
           <input
             type="tel"
-            className="h-full flex-1 p-2"
+            className="h-full flex-1 p-2 rounded-md"
             placeholder="Mobile number"
             onChange={(event) =>
               setPayload((pre) => ({ ...pre, phoneNumber: event.target.value }))

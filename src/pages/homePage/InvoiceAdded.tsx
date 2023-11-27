@@ -1,34 +1,22 @@
 import ICONS from "../../assets/icons";
-import IMAGES from "../../assets/images";
-import { ClientCard } from "../../components";
 
 function InvoiceAdded() {
   return (
-    <div className="h-screen">
-      <div className="mx-[2%]">
-        <div className="mt-9 flex justify-between items-center">
-          <h2 className="font-medium text-lg text-gray-700">Client</h2>
-          <button>
-            <img src={ICONS.add} alt="" />
-          </button>
-        </div>
-
-        <section className="relative mt-2 border rounded-md">
-          <input type="text" className="pl-6 py-1 w-full rounded-md" placeholder="Search"/>
-          <img
-            className="top-1 left-1 absolute pointer-events-none w-5"
-            src={ICONS.search}
-            alt=""
-          />
+    <div className="h-screen flex items-center justify-center">
+      <div className="flex-1 mx-[3%]">
+        <section className="flex flex-col items-center mt-2 rounded-md">
+          <img className="w-[88px]" src={ICONS.success} alt="" />
+          <h2 className="font-medium text-2xl text-primary mt-2">Invoice Added Successfully</h2>
         </section>
         <section className="mt-7">
-          {/* <div className="flex flex-col h-[400px] justify-center items-center">
-            <img width={118} height={150} src={IMAGES.mentions} alt="" />
-            <p className="text-center mx-6">
-              No Client Available. Click on the plus (+) icon to create one
-            </p>
-          </div> */}
-          <ClientCard />
+          <div className="flex flex-col mt-2 font-medium">
+            <button className="text-center  p-2.5 rounded-lg flex-1 bg-primary text-white">
+              Share invoice
+            </button>
+            <button className="text-center mt-2 p-2.5 rounded-lg flex-1">
+              Return Home
+            </button>
+          </div>
         </section>
       </div>
     </div>

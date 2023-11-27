@@ -4,9 +4,9 @@ import AddTask from "./AddTask"
 import Client from "./Client"
 import Home from "./Home"
 import Invoice from "./Invoice"
+import InvoiceAdded from "./InvoiceAdded"
 import LandingPage from "./LandingPage"
 import Task from "./Task"
-
 
 const homePage = {
   LandingPage,
@@ -16,7 +16,8 @@ const homePage = {
   Client,
   AddTask,
   AddClient,
-  AddInvoice
+  AddInvoice,
+  InvoiceAdded
 }
 
 export default homePage

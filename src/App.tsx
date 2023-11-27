@@ -6,10 +6,10 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        {/* <Route path="" element={<Extra />} /> */}
-        <Route path="" element={<homePage.LandingPage />}>
+        <Route path="" element={<homePage.InvoiceAdded />} />
+        {/* <Route path="" element={<homePage.LandingPage />}>
           <Route path="" element={<homePage.AddInvoice />} />
-        </Route>
+        </Route> */}
       </Routes>
     </BrowserRouter>
   );

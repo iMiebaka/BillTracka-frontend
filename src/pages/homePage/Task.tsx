@@ -1,7 +1,9 @@
 import ICONS from "../../assets/icons";
 import IMAGES from "../../assets/images";
+import { TaskMenu } from "../../components";
 
 function Task() {
+  const tasks = [];
   return (
     <div className="h-screen">
       <div className="mx-[2%]">
@@ -14,7 +16,9 @@ function Task() {
 
         <section className="flex justify-between mt-2">
           <div className="flex text-masterGrey text-xs font-medium gap-3 bg-[#E6E8FE] flex-1 p-2 rounded-md">
-            <button className="text-blue-600 bg-white p-2 rounded-md">All</button>
+            <button className="text-blue-600 bg-white p-2 rounded-md">
+              All
+            </button>
             <button>To-do</button>
             <button>Completed</button>
           </div>
@@ -23,13 +27,16 @@ function Task() {
             <img className="m-3" src={ICONS.search} alt="" />
           </button>
         </section>
-        <section>
-          <div className="flex flex-col h-[400px] justify-center items-center">
-            <img width={60} height={83} src={IMAGES.clipboard} alt="" />
-            <p className="text-center mx-6">
-              No Task Available. Click on the plus (+) icon to create one
-            </p>
-          </div>
+        <section className="mt-7">
+          {/* {tasks.length == 0 && (
+            <div className="flex flex-col h-[400px] justify-center items-center">
+              <img width={60} height={83} src={IMAGES.clipboard} alt="" />
+              <p className="text-center mx-6">
+                No Task Available. Click on the plus (+) icon to create one
+              </p>
+            </div>
+          )} */}
+          <TaskMenu />
         </section>
       </div>
     </div>

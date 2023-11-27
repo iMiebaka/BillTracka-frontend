@@ -14,7 +14,7 @@ import message from "./message.svg"
 import invoice from "./invoice.svg"
 import add from "./add.svg"
 import search from "./search.svg"
-
+import dot from "./dot.svg"
 
 
 const ICONS = {
@@ -33,7 +33,8 @@ const ICONS = {
   message,
   invoice,
   add,
-  search
+  search,
+  dot
 };
 
 export default ICONS;

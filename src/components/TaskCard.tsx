@@ -1,6 +1,6 @@
 import ICONS from "../assets/icons";
 
-function TaskMenu() {
+function TaskCard() {
   return (
     <div className="border p-4 pt-2 rounded-2xl">
       <div className="flex justify-between">
@@ -27,4 +27,4 @@ function TaskMenu() {
   );
 }
 
-export default TaskMenu;
+export default TaskCard;

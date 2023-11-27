@@ -1,6 +1,6 @@
 import ICONS from "../../assets/icons";
 import IMAGES from "../../assets/images";
-import { TaskMenu } from "../../components";
+import { TaskCard } from "../../components";
 
 function Task() {
   const tasks = [];
@@ -36,7 +36,7 @@ function Task() {
               </p>
             </div>
           )} */}
-          <TaskMenu />
+          <TaskCard />
         </section>
       </div>
     </div>

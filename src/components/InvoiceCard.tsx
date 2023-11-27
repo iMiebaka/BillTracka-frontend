@@ -1,6 +1,6 @@
 import ICONS from "../assets/icons";
 
-function TaskInvoice() {
+function InvoiceCard() {
   return (
     <div className="border text-xs p-2 pt-2 rounded-2xl">
       <div className="flex justify-between">
@@ -21,4 +21,4 @@ function TaskInvoice() {
   );
 }
 
-export default TaskInvoice;
+export default InvoiceCard;

@@ -1,6 +1,6 @@
 import ICONS from "../../assets/icons";
 import IMAGES from "../../assets/images";
-import { TaskInvoice } from "../../components";
+import { InvoiceCard } from "../../components";
 
 function Invoice() {
   return (
@@ -34,7 +34,7 @@ function Invoice() {
             </p>
           </div> */}
 
-          <TaskInvoice />
+          <InvoiceCard />
         </section>
       </div>
     </div>

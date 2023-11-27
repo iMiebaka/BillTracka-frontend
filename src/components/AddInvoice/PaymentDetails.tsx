@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
+import { MasterContextConsumer } from "../../store/main";
 
 function PaymentDetails() {
+  const { clientInvoice, setClientInvoice } = useContext(MasterContextConsumer);
+
   return (
     <>
       <section className="mb-5 border rounded-md p-3 mt-7">
@@ -72,7 +75,9 @@ function PaymentDetails() {
         </div>
       </section>
       <div className="flex gap-2 mt-2 font-medium">
-        <button className="text-center  p-2.5 rounded-lg flex-1 bg-primary text-white">
+        <button
+        onClick={() => setClientInvoice({...clientInvoice, progess: 3})}
+        className="text-center  p-2.5 rounded-lg flex-1 bg-primary text-white">
           Next
         </button>
       </div>

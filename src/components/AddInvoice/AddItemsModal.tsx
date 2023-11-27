@@ -1,4 +1,6 @@
+import { useContext } from "react";
 import ICONS from "../../assets/icons";
+import { MasterContextConsumer } from "../../store/main";
 
 interface ITProps {
   modalOpen: boolean;
@@ -25,7 +27,9 @@ function AddItemsModal({ modalOpen, setModalOpen }: ITProps) {
             <div className="p-4">
               <div className="flex justify-between">
                 <span className="text-base font-medium">Add Item</span>
-                <button>
+                <button
+                onClick={() => setModalOpen(false)}
+                >
                   <img src={ICONS.close} alt="" />
                 </button>
               </div>
@@ -91,8 +95,10 @@ function AddItemsModal({ modalOpen, setModalOpen }: ITProps) {
                 </div>
               </section>
               <div className="flex mt-2 font-medium">
-                <button className="text-center  p-2.5 rounded-lg flex-1 bg-primary text-white">
-                  Next
+                <button
+                onClick={() => setModalOpen(false)}
+                className="text-center  p-2.5 rounded-lg flex-1 bg-primary text-white">
+                  Add Item
                 </button>
               </div>
             </div>

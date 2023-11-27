@@ -1,6 +1,7 @@
+import { Link } from "react-router-dom";
 import ICONS from "../../assets/icons";
-import IMAGES from "../../assets/images";
 import { InvoiceCard } from "../../components";
+import frontendRoute from "../../services/routes/frontend";
 
 function Invoice() {
   return (
@@ -8,9 +9,9 @@ function Invoice() {
       <div className="mx-[2%]">
         <div className="mt-9 flex justify-between items-center">
           <h2 className="font-medium text-lg text-gray-700">Invoice</h2>
-          <button>
+          <Link to={frontendRoute.invoiceNew}>
             <img src={ICONS.add} alt="" />
-          </button>
+          </Link>
         </div>
 
         <section className="flex justify-between mt-2">

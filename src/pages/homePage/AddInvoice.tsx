@@ -1,13 +1,10 @@
 import ICONS from "../../assets/icons";
 import { AddInvoiceProgress, BackButton } from "../../components";
-import { useState } from "react";
+import { useContext } from "react";
+import { MasterContextConsumer } from "../../store/main";
 
 function AddInvoice() {
-  const [payload, setPayload] = useState({
-    email: "",
-    password: "",
-    progress: 2,
-  });
+const {clientInvoice, setClientInvoice} = useContext(MasterContextConsumer)
 
   return (
     <div className="h-screen">
@@ -25,13 +22,15 @@ function AddInvoice() {
             "Payment Details",
             "Preview Invoice",
           ].map((i, k) => (
-            <div className="flex flex-col items-center text-sm font-medium">
+            <div
+            onClick={() => setClientInvoice({...clientInvoice, progess: k})}
+            className="flex flex-col items-center text-sm font-medium">
               <div
                 className={`w-[32px] h-[32px] border ${
-                  k == payload.progress ? "border-primary" : ""
+                  k == clientInvoice.progess ? "border-primary" : ""
                 } rounded-full flex justify-center items-center`}
               >
-                {k < payload.progress ? (
+                {k < clientInvoice.progess ? (
                   <img className="w-full" src={ICONS.check} alt="" />
                 ) : (
                   k + 1
@@ -39,7 +38,7 @@ function AddInvoice() {
               </div>
               <p
                 className={`text-center ${
-                  k == payload.progress ? "text-primary" : ""
+                  k == clientInvoice.progess ? "text-primary" : ""
                 }`}
               >
                 {i}
@@ -47,9 +46,9 @@ function AddInvoice() {
             </div>
           ))}
         </section>
-        {payload.progress == 0 && <AddInvoiceProgress.ClientDetails />}
-        {payload.progress == 1 && <AddInvoiceProgress.ClientItems />}
-        {payload.progress == 2 && <AddInvoiceProgress.PaymentDetails />}
+        {clientInvoice.progess == 0 && <AddInvoiceProgress.ClientDetails />}
+        {clientInvoice.progess == 1 && <AddInvoiceProgress.ClientItems />}
+        {clientInvoice.progess == 2 && <AddInvoiceProgress.PaymentDetails />}
       </div>
     </div>
   );

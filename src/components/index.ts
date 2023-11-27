@@ -3,8 +3,11 @@ import BackButton from "./BackButton";
 import ClientCard from "./ClientCard";
 import HomeFooter from "./HomeFooter";
 import InvoiceCard from "./InvoiceCard";
+import MoreRouter from "./MoreRouter";
 import TaskCard from "./TaskCard";
 import TranasactionType from "./TranasactionType";
+
+
 
 export {
   BackButton,
@@ -13,5 +16,6 @@ export {
   TaskCard,
   InvoiceCard,
   ClientCard,
-  AddInvoiceProgress
+  AddInvoiceProgress,
+  MoreRouter
 };

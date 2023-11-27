@@ -6,7 +6,6 @@ function LandingPage() {
   return (
     <div className="relative">
       <Outlet />
-
       <HomeFooter />
     </div>
   );

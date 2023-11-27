@@ -1,30 +1,70 @@
-import { ReactNode, createContext } from "react";
+import { createContext, useState } from "react";
 import { ToastContainer, cssTransition, toast } from "react-toastify";
 import "animate.css/animate.min.css";
 import "react-toastify/dist/ReactToastify.css";
-import { ITRunToast } from "../interface/store";
-
-interface ITContextValue {
-  runToast: (status: string, message: string) => void;
-}
-
-interface ContextNode {
-  children: ReactNode;
-}
-
-
+import {
+  ContextNode,
+  ITClientInvoice,
+  ITContextValue,
+  ITRunToast,
+} from "../interface/store";
 
 const bounce = cssTransition({
   enter: "animate__animated animate__bounceIn",
   exit: "animate__animated animate__bounceOut",
 });
 
-const ContextConsumer = createContext<ITContextValue>({
-  runToast: (status: string, message: string) => {},
+const MasterContextConsumer = createContext<ITContextValue>({
+  routePath: "/",
+  setRoutePath: (path: string) => {},
+  clientInvoice: {
+    progess: 0,
+    shippingFee: 0,
+    clientDetails: {
+      name: "",
+      mobileNumber: "",
+      email: "",
+      state: "",
+      lga: "",
+      address: "",
+    },
+    itemsDetails: [],
+    paymentDetails: {
+      paymentStatus: "",
+      paymentMode: "",
+      issueDate: "",
+      dueDate: "",
+      note: "",
+    },
+  },
+  setClientInvoice: (clientInvoice: ITClientInvoice) => {},
+  runToast: (ITRunToast) => {},
 });
 
-function ContextProvider ({ children }: ContextNode) {
-  const runToast = (status: string, message: string) => {
+function MasterContextProvider({ children }: ContextNode) {
+  const [routePath, setRoutePath] = useState<string>("/");
+  const [clientInvoice, setClientInvoice] = useState<ITClientInvoice>({
+    progess: 0,
+    shippingFee: 0,
+    clientDetails: {
+      name: "",
+      mobileNumber: "",
+      email: "",
+      state: "",
+      lga: "",
+      address: "",
+    },
+    itemsDetails: [],
+    paymentDetails: {
+      paymentStatus: "",
+      paymentMode: "",
+      issueDate: "",
+      dueDate: "",
+      note: "",
+    },
+  });
+
+  const runToast = ({ status, message }: ITRunToast) => {
     if (status == "info")
       toast.info(message, {
         transition: bounce,
@@ -42,17 +82,20 @@ function ContextProvider ({ children }: ContextNode) {
         transition: bounce,
       });
   };
-
   return (
-    <ContextConsumer.Provider
+    <MasterContextConsumer.Provider
       value={{
+        routePath,
+        setRoutePath,
         runToast,
+        clientInvoice,
+        setClientInvoice,
       }}
     >
-    <ToastContainer transition={bounce} />
-    {children}
-    </ContextConsumer.Provider>
+      <ToastContainer transition={bounce} />
+      {children}
+    </MasterContextConsumer.Provider>
   );
-};
+}
 
-export { ContextConsumer, ContextProvider };
+export { MasterContextConsumer, MasterContextProvider };

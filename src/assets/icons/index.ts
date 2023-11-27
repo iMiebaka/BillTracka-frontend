@@ -20,6 +20,9 @@ import phone from "./phone.svg";
 import close from "./close.svg";
 import check from "./check.svg";
 import success from "./success.svg";
+import forwardArrow from "./forward-arrow.svg"
+import edit from "./edit.svg"
+import logout from "./logout.svg"
 
 const ICONS = {
   leftArrow,
@@ -44,6 +47,9 @@ const ICONS = {
   close,
   check,
   success,
+  forwardArrow,
+  edit,
+  logout
 };
 
 export default ICONS;

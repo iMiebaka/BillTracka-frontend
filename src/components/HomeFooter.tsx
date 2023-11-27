@@ -20,7 +20,7 @@ function HomeFooter() {
         {routes.map((i, k) => (
           <Link
             key={k}
-            className="flex flex-col items-center font-medium"
+            className="flex flex-col items-center font-medium text-xs"
             to={i.route}
           >
             <img src={i.icon} width={20} alt={i.name} />

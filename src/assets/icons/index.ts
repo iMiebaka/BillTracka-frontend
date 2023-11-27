@@ -10,12 +10,13 @@ import taskFull from "./bottomNavigator/task-fill.svg";
 import clientFill from "./bottomNavigator/clients-fill.svg";
 import homeFill from "./bottomNavigator/home-fill.svg";
 import bell from "./bell.svg";
-import message from "./message.svg"
-import invoice from "./invoice.svg"
-import add from "./add.svg"
-import search from "./search.svg"
-import dot from "./dot.svg"
-
+import message from "./message.svg";
+import invoice from "./invoice.svg";
+import add from "./add.svg";
+import search from "./search.svg";
+import dot from "./dot.svg";
+import messageTwo from "./message-two.svg";
+import phone from "./phone.svg";
 
 const ICONS = {
   leftArrow,
@@ -34,7 +35,9 @@ const ICONS = {
   invoice,
   add,
   search,
-  dot
+  dot,
+  messageTwo,
+  phone,
 };
 
 export default ICONS;

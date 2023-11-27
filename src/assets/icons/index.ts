@@ -17,6 +17,9 @@ import search from "./search.svg";
 import dot from "./dot.svg";
 import messageTwo from "./message-two.svg";
 import phone from "./phone.svg";
+import close from "./close.svg";
+import check from "./check.svg";
+import success from "./success.svg";
 
 const ICONS = {
   leftArrow,
@@ -38,6 +41,9 @@ const ICONS = {
   dot,
   messageTwo,
   phone,
+  close,
+  check,
+  success,
 };
 
 export default ICONS;

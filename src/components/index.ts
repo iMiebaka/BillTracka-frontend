@@ -1,3 +1,4 @@
+import AddInvoiceProgress from "./AddInvoice";
 import BackButton from "./BackButton";
 import ClientCard from "./ClientCard";
 import HomeFooter from "./HomeFooter";
@@ -12,4 +13,5 @@ export {
   TaskCard,
   InvoiceCard,
   ClientCard,
+  AddInvoiceProgress
 };

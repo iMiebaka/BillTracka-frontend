@@ -8,7 +8,7 @@ function App() {
       <Routes>
         {/* <Route path="" element={<Extra />} /> */}
         <Route path="" element={<homePage.LandingPage />}>
-          <Route path="" element={<homePage.Client />} />
+          <Route path="" element={<homePage.AddInvoice />} />
         </Route>
       </Routes>
     </BrowserRouter>

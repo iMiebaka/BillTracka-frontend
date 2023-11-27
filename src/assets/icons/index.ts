@@ -9,9 +9,11 @@ import more from "./bottomNavigator/more.svg";
 import taskFull from "./bottomNavigator/task-fill.svg";
 import clientFill from "./bottomNavigator/clients-fill.svg";
 import homeFill from "./bottomNavigator/home-fill.svg";
+import moreFill from "./bottomNavigator/more-fill.svg";
 import bell from "./bell.svg";
 import message from "./message.svg";
 import invoice from "./invoice.svg";
+import invoiceFill from "./bottomNavigator/invoice-fill.svg";
 import add from "./add.svg";
 import search from "./search.svg";
 import dot from "./dot.svg";
@@ -35,6 +37,8 @@ const ICONS = {
   more,
   taskFull,
   clientFill,
+  invoiceFill,
+  moreFill,
   homeFill,
   bell,
   message,

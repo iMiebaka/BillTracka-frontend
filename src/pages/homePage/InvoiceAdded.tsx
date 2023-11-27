@@ -1,4 +1,6 @@
+import { Link } from "react-router-dom";
 import ICONS from "../../assets/icons";
+import frontendRoute from "../../services/routes/frontend";
 
 function InvoiceAdded() {
   return (
@@ -13,9 +15,9 @@ function InvoiceAdded() {
             <button className="text-center  p-2.5 rounded-lg flex-1 bg-primary text-white">
               Share invoice
             </button>
-            <button className="text-center mt-2 p-2.5 rounded-lg flex-1">
+            <Link to={frontendRoute.landingPage} className="text-center mt-2 p-2.5 rounded-lg flex-1">
               Return Home
-            </button>
+            </Link>
           </div>
         </section>
       </div>

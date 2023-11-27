@@ -2,8 +2,13 @@ import ICONS from "../../assets/icons";
 import { BackButton, MoreRouter } from "../../components";
 import IMAGES from "../../assets/images";
 import frontendRoute from "../../services/routes/frontend";
+import { useContext, useEffect } from "react";
+import { MasterContextConsumer } from "../../store/main";
 
 function Home() {
+  const { setRoutePath } = useContext(MasterContextConsumer);
+  useEffect(() => setRoutePath(location.pathname), []);
+
   return (
     <div className="h-screen">
       <div className="mx-[2%]">

@@ -2,8 +2,13 @@ import { Link } from "react-router-dom";
 import ICONS from "../../assets/icons";
 import { InvoiceCard } from "../../components";
 import frontendRoute from "../../services/routes/frontend";
+import { useContext, useEffect } from "react";
+import { MasterContextConsumer } from "../../store/main";
 
 function Invoice() {
+  const { setRoutePath } = useContext(MasterContextConsumer);
+  useEffect(() => setRoutePath(location.pathname), []);
+
   return (
     <div className="h-screen">
       <div className="mx-[2%]">

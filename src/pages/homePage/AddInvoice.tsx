@@ -49,6 +49,7 @@ const {clientInvoice, setClientInvoice} = useContext(MasterContextConsumer)
         {clientInvoice.progess == 0 && <AddInvoiceProgress.ClientDetails />}
         {clientInvoice.progess == 1 && <AddInvoiceProgress.ClientItems />}
         {clientInvoice.progess == 2 && <AddInvoiceProgress.PaymentDetails />}
+        {clientInvoice.progess == 3 && <AddInvoiceProgress.PreviewInvoice />}
       </div>
     </div>
   );

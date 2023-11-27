@@ -1,10 +1,14 @@
-import { useState } from "react";
+import { useContext, useEffect } from "react";
 import ICONS from "../../assets/icons";
 import { TranasactionType } from "../../components";
 import IMAGES from "../../assets/images";
+import { MasterContextConsumer } from "../../store/main";
 
 function Home() {
-  const [toggleVisible, setToggleVisible] = useState(false);
+  const { setRoutePath } = useContext(MasterContextConsumer);
+  useEffect(() => setRoutePath(location.pathname), []);
+
+
   return (
     <div className="h-screen">
       <div className="mx-[2%]">

@@ -37,6 +37,7 @@ function App() {
             />
           </Route>
           <Route path={frontendRoute.report} element={<morePage.Products />} />
+          <Route path={frontendRoute.invoiceCreated} element={<homePage.InvoiceAdded />} />
           <Route
             path={frontendRoute.reminder}
             element={<morePage.Reminders />}

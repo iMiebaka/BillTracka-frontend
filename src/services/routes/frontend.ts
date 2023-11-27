@@ -20,6 +20,7 @@ const frontendRoute = {
 
     // invoice route
     invoiceNew: "/invoice/new",
+    invoiceCreated: "/invoice/success",
     invoiceSummary: "/invoice/summary",
 }
 

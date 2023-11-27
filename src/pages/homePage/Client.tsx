@@ -1,8 +1,12 @@
+import { useContext, useEffect } from "react";
 import ICONS from "../../assets/icons";
-import IMAGES from "../../assets/images";
 import { ClientCard } from "../../components";
+import { MasterContextConsumer } from "../../store/main";
 
 function Client() {
+  const { setRoutePath } = useContext(MasterContextConsumer);
+  useEffect(() => setRoutePath(location.pathname), []);
+
   return (
     <div className="h-screen">
       <div className="mx-[2%]">

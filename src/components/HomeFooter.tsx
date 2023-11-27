@@ -1,8 +1,12 @@
 import { Link } from "react-router-dom";
 import ICONS from "../assets/icons";
 import frontendRoute from "../services/routes/frontend";
+import { useContext } from "react";
+import { MasterContextConsumer } from "../store/main";
 
 function HomeFooter() {
+  const { routePath } = useContext(MasterContextConsumer);
+
   const routes = [
     {
       icon: ICONS.home,
@@ -12,25 +16,25 @@ function HomeFooter() {
     },
     {
       icon: ICONS.task,
-      iconFill: ICONS.task,
+      iconFill: ICONS.taskFull,
       name: "Tasks",
       route: frontendRoute.taskSummary,
     },
     {
       icon: ICONS.invoice,
-      iconFill: ICONS.invoice,
+      iconFill: ICONS.invoiceFill,
       name: "Invoice",
       route: frontendRoute.invoiceSummary,
     },
     {
       icon: ICONS.client,
-      iconFill: ICONS.client,
+      iconFill: ICONS.clientFill,
       name: "Clients",
       route: frontendRoute.clientSummary,
     },
     {
       icon: ICONS.more,
-      iconFill: ICONS.more,
+      iconFill: ICONS.moreFill,
       name: "More",
       route: frontendRoute.more,
     },
@@ -45,7 +49,7 @@ function HomeFooter() {
             to={i.route}
           >
             <img
-              src={location.pathname == i.route ? i.iconFill : i.icon}
+              src={routePath == i.route ? i.iconFill : i.icon}
               width={20}
               alt={i.name}
             />

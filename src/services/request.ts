@@ -1,5 +1,5 @@
-import axios, { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
-import { COOKIE, baseURL } from "../utils";
+import axios, { AxiosInstance } from "axios";
+import { baseURL } from "../utils";
 
 // axios.defaults.headers.common["X-CLIENT-ID"] = device_id;
 
@@ -10,13 +10,13 @@ const api: AxiosInstance = axios.create({
   },
 });
 
-const authApi: AxiosInstance = axios.create({
-  baseURL,
-  headers: {
-    "Content-Type": "application/json",
-    // "X-CLIENT-ID": CLIENT_ID,
-  },
-});
+// const authApi: AxiosInstance = axios.create({
+//   baseURL,
+//   headers: {
+//     "Content-Type": "application/json",
+//     // "X-CLIENT-ID": CLIENT_ID,
+//   },
+// });
 
 // async function refreshAccessToken() {
 //   const refreshToken = COOKIE.get("access_token");
@@ -41,7 +41,7 @@ api.interceptors.response.use(
     return response;
   },
   async (error) => {
-    const originalRequest = error.config;
+    // const originalRequest = error.config;
 
     // If the response status code is 401 (Unauthorized) and the request hasn't been retried yet
     // if (error.response.status === 401 && !originalRequest._retry) {

@@ -4,7 +4,7 @@ import { useContext } from "react";
 import { MasterContextConsumer } from "../../store/main";
 
 function AddInvoice() {
-const {clientInvoice, setClientInvoice} = useContext(MasterContextConsumer)
+  const { clientInvoice, setClientInvoice } = useContext(MasterContextConsumer);
 
   return (
     <div className="h-screen">
@@ -23,8 +23,9 @@ const {clientInvoice, setClientInvoice} = useContext(MasterContextConsumer)
             "Preview Invoice",
           ].map((i, k) => (
             <div
-            onClick={() => setClientInvoice({...clientInvoice, progess: k})}
-            className="flex flex-col items-center text-sm font-medium">
+              onClick={() => setClientInvoice({ ...clientInvoice, progess: k })}
+              className="flex flex-col items-center text-sm font-medium"
+            >
               <div
                 className={`w-[32px] h-[32px] border ${
                   k == clientInvoice.progess ? "border-primary" : ""

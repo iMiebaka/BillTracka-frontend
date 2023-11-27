@@ -1,16 +1,21 @@
 import { Link } from "react-router-dom";
 import ICONS from "../../assets/icons";
-import IMAGES from "../../assets/images";
 import { TaskCard } from "../../components";
 import frontendRoute from "../../services/routes/frontend";
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import { MasterContextConsumer } from "../../store/main";
+import { getTask } from "../../services/home";
+import IMAGES from "../../assets/images";
 
 function Task() {
-  const tasks = [];
-  const { setRoutePath } = useContext(MasterContextConsumer);
+  const { setRoutePath, isLoggedIn } = useContext(MasterContextConsumer);
+  const [tasks, setTasks] = useState<any>([]);
 
-  useEffect(() => setRoutePath(location.pathname), []);
+  useEffect(() => {
+    {!isLoggedIn && (location.href = frontendRoute.login)}
+    setRoutePath(location.pathname);
+    getTask().then((res) => setTasks(res.data));
+  }, []);
 
   return (
     <div className="h-screen">
@@ -36,15 +41,22 @@ function Task() {
           </button>
         </section>
         <section className="mt-7">
-          {/* {tasks.length == 0 && (
+          {tasks.length == 0 && (
             <div className="flex flex-col h-[400px] justify-center items-center">
               <img width={60} height={83} src={IMAGES.clipboard} alt="" />
               <p className="text-center mx-6">
                 No Task Available. Click on the plus (+) icon to create one
               </p>
             </div>
-          )} */}
-          <TaskCard />
+          )}
+          {tasks.map((i: any, k: number) => (
+            <TaskCard
+              key={k}
+              index={k + 1}
+              taskTitle={i.taskTitle}
+              taskDescription={i.taskDescription}
+            />
+          ))}
         </section>
       </div>
     </div>

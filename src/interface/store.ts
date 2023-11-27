@@ -42,6 +42,8 @@ export interface ITClientInvoice {
 
 export interface ITContextValue {
   routePath: string;
+  isLoggedIn: boolean;
+  setIsLoggedIn: (pre: boolean) => void;
   setRoutePath: (path: string) => void;
   clientInvoice: ITClientInvoice;
   setClientInvoice: (clientInvoice: ITClientInvoice) => void;

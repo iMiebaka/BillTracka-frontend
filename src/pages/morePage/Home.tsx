@@ -1,6 +1,5 @@
 import ICONS from "../../assets/icons";
 import { BackButton, MoreRouter } from "../../components";
-import IMAGES from "../../assets/images";
 import frontendRoute from "../../services/routes/frontend";
 import { useContext, useEffect } from "react";
 import { MasterContextConsumer } from "../../store/main";

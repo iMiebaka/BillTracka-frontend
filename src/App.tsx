@@ -12,8 +12,9 @@ function App() {
       <BrowserRouter>
         <Routes>
           {/* <Route path={frontendRoute.landingPage} element={<homePage.Home />} /> */}
-          <Route path={frontendRoute.login} element={<auth.EmailLogin />} />
-          <Route path={frontendRoute.register} element={<auth.EmailSignUp />} />
+          <Route path={frontendRoute.login} element={<auth.Login />} />
+          <Route path={frontendRoute.verify} element={<auth.ConfirmNumber />} />
+          <Route path={frontendRoute.register} element={<auth.SignUp />} />
           <Route
             path={frontendRoute.landingPage}
             element={<homePage.LandingPage />}

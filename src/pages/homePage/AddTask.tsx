@@ -1,14 +1,14 @@
-import { Link } from "react-router-dom";
-import { BackButton } from "../../components";
 import { useState } from "react";
-import ICONS from "../../assets/icons";
+import { BackButton } from "../../components";
 
 function AddTask() {
   const [payload, setPayload] = useState({
-    email: "",
-    password: "",
+    taskTitle: "",
+    taskDescription: "",
+    startDate: "",
+    endDate: "",
+    completed: false
   });
-  const [togglePassword, setTogglePassword] = useState(false);
 
   return (
     <div className="h-screen">
@@ -28,7 +28,8 @@ function AddTask() {
               type="text"
               className="p-3 border w-full border-gray-400 rounded-md"
               placeholder="Enter Title"
-            />
+              onChange={(e) => setPayload(pre => ({...pre, taskTitle: e.target.value}))}
+              />
           </div>
           <div className=" mt-2">
             <label htmlFor="" className="text-sm font-medium">
@@ -38,7 +39,8 @@ function AddTask() {
               type="text"
               className="p-3 border w-full border-gray-400 rounded-md"
               placeholder="Enter Description"
-            />
+              onChange={(e) => setPayload(pre => ({...pre, taskDescription: e.target.value}))}
+              />
           </div>
 
           <div className=" mt-2">
@@ -49,7 +51,8 @@ function AddTask() {
               type="datetime-local"
               className="p-3 border w-full border-gray-400 rounded-md"
               placeholder="Email address"
-            />
+              onChange={(e) => setPayload(pre => ({...pre, startDate: e.target.value}))}
+              />
           </div>
           <div className=" mt-2">
             <label htmlFor="" className="text-sm font-medium">
@@ -59,7 +62,8 @@ function AddTask() {
               type="datetime-local"
               className="p-3 border w-full border-gray-400 rounded-md"
               placeholder="Email address"
-            />
+              onChange={(e) => setPayload(pre => ({...pre, endDate: e.target.value}))}
+              />
           </div>
         </section>
         <div className="flex gap-2 mt-2 font-medium">

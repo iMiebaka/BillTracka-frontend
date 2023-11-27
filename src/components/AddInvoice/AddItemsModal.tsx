@@ -1,6 +1,4 @@
-import { useContext } from "react";
 import ICONS from "../../assets/icons";
-import { MasterContextConsumer } from "../../store/main";
 
 interface ITProps {
   modalOpen: boolean;

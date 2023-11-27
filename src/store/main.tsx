@@ -16,6 +16,8 @@ const bounce = cssTransition({
 
 const MasterContextConsumer = createContext<ITContextValue>({
   routePath: "/",
+  isLoggedIn: false,
+  setIsLoggedIn: (pre: boolean) => {},
   setRoutePath: (path: string) => {},
   clientInvoice: {
     progess: 0,
@@ -43,6 +45,7 @@ const MasterContextConsumer = createContext<ITContextValue>({
 
 function MasterContextProvider({ children }: ContextNode) {
   const [routePath, setRoutePath] = useState<string>("/");
+  const [isLoggedIn, setIsLoggedIn] = useState(false)
   const [clientInvoice, setClientInvoice] = useState<ITClientInvoice>({
     progess: 0,
     shippingFee: 0,
@@ -87,6 +90,7 @@ function MasterContextProvider({ children }: ContextNode) {
       value={{
         routePath,
         setRoutePath,
+        isLoggedIn, setIsLoggedIn,
         runToast,
         clientInvoice,
         setClientInvoice,

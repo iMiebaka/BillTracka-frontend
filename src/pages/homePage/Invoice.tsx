@@ -1,5 +1,6 @@
 import ICONS from "../../assets/icons";
 import IMAGES from "../../assets/images";
+import { TaskInvoice } from "../../components";
 
 function Invoice() {
   return (
@@ -25,13 +26,15 @@ function Invoice() {
             <img className="m-3" src={ICONS.search} alt="" />
           </button>
         </section>
-        <section>
-          <div className="flex flex-col h-[400px] justify-center items-center">
+        <section className="mt-7">
+          {/* <div className="flex flex-col h-[400px] justify-center items-center">
             <img width={106} height={133} src={IMAGES.reciept} alt="" />
             <p className="text-center mx-6">
               No Invoice Available. Click on the plus (+) icon to create one
             </p>
-          </div>
+          </div> */}
+
+          <TaskInvoice />
         </section>
       </div>
     </div>

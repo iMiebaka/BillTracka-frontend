@@ -1,20 +1,27 @@
 import { Link } from "react-router-dom";
-import ICONS from "../../assets/icons";
-import { TaskCard } from "../../components";
+import ICONS from "../../asset/icons";
+import { SpinnerOne, TaskCard } from "../../components";
 import frontendRoute from "../../services/routes/frontend";
 import { useContext, useEffect, useState } from "react";
 import { MasterContextConsumer } from "../../store/main";
 import { getTask } from "../../services/home";
-import IMAGES from "../../assets/images";
+import IMAGES from "../../asset/images";
 
 function Task() {
   const { setRoutePath, isLoggedIn } = useContext(MasterContextConsumer);
   const [tasks, setTasks] = useState<any>([]);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
-    {!isLoggedIn && (location.href = frontendRoute.login)}
+    {
+      !isLoggedIn && (location.href = frontendRoute.login);
+    }
     setRoutePath(location.pathname);
-    getTask().then((res) => setTasks(res.data));
+    setIsLoading(true);
+    getTask().then((res) => {
+      setTasks(res.data);
+      setIsLoading(false);
+    });
   }, []);
 
   return (
@@ -41,12 +48,17 @@ function Task() {
           </button>
         </section>
         <section className="mt-7">
-          {tasks.length == 0 && (
+          {tasks.length == 0 && !isLoading && (
             <div className="flex flex-col h-[400px] justify-center items-center">
               <img width={60} height={83} src={IMAGES.clipboard} alt="" />
               <p className="text-center mx-6">
                 No Task Available. Click on the plus (+) icon to create one
               </p>
+            </div>
+          )}
+          {isLoading && (
+            <div className="grid place-items-center h-screen -mt-[200px]">
+              <SpinnerOne />
             </div>
           )}
           {tasks.map((i: any, k: number) => (

@@ -1,7 +1,7 @@
 import { Link, useNavigate } from "react-router-dom";
 import { BackButton } from "../../components";
 import { FormEvent, useContext, useState } from "react";
-import ICONS from "../../assets/icons";
+import ICONS from "../../asset/icons";
 import { MasterContextConsumer } from "../../store/main";
 import frontendRoute from "../../services/routes/frontend";
 import { login } from "../../services/auth";
@@ -12,7 +12,7 @@ function Login() {
     password: "",
   });
   const [isLoading, setIsLoading] = useState(false);
-  const { runToast } = useContext(MasterContextConsumer);
+  const { runToast, setIsLoggedIn } = useContext(MasterContextConsumer);
   const navigate = useNavigate();
 
   const [togglePassword, setTogglePassword] = useState(false);
@@ -23,6 +23,7 @@ function Login() {
       const response = await login(payload);
       runToast({ status: "success", message: response.message });
       navigate(frontendRoute.landingPage);
+      setIsLoggedIn(true)
     } catch (err: any) {
       runToast({ status: "error", message: err.response.data.message });
     } finally {

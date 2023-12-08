@@ -1,7 +1,9 @@
 import { useContext, useEffect } from "react";
-import ICONS from "../../assets/icons";
+import ICONS from "../../asset/icons";
 import { ClientCard } from "../../components";
 import { MasterContextConsumer } from "../../store/main";
+import { Link } from "react-router-dom";
+import frontendRoute from "../../services/routes/frontend";
 
 function Client() {
   const { setRoutePath } = useContext(MasterContextConsumer);
@@ -12,9 +14,9 @@ function Client() {
       <div className="mx-[2%]">
         <div className="mt-9 flex justify-between items-center">
           <h2 className="font-medium text-lg text-gray-700">Client</h2>
-          <button>
+          <Link to={frontendRoute.clientNew}>
             <img src={ICONS.add} alt="" />
-          </button>
+          </Link>
         </div>
 
         <section className="relative mt-2 border rounded-md">

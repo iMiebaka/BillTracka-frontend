@@ -4,9 +4,9 @@ import ClientCard from "./ClientCard";
 import HomeFooter from "./HomeFooter";
 import InvoiceCard from "./InvoiceCard";
 import MoreRouter from "./MoreRouter";
+import SpinnerOne from "./SpinnerOne";
 import TaskCard from "./TaskCard";
 import TranasactionType from "./TranasactionType";
-
 
 
 export {
@@ -17,5 +17,6 @@ export {
   InvoiceCard,
   ClientCard,
   AddInvoiceProgress,
-  MoreRouter
+  MoreRouter,
+  SpinnerOne
 };

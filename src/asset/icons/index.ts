@@ -25,6 +25,9 @@ import success from "./success.svg";
 import forwardArrow from "./forward-arrow.svg"
 import edit from "./edit.svg"
 import logout from "./logout.svg"
+import eyeOpen from "./eye-show.svg"
+
+
 
 const ICONS = {
   leftArrow,
@@ -53,7 +56,8 @@ const ICONS = {
   success,
   forwardArrow,
   edit,
-  logout
+  logout,
+  eyeOpen
 };
 
 export default ICONS;

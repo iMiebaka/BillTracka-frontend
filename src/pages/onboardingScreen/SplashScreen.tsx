@@ -1,4 +1,4 @@
-import IMAGES from "../../assets/images"
+import IMAGES from "../../asset/images"
 
 function SplashScreen() {
   return (

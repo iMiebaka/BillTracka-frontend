@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import ICONS from "../../assets/icons";
+import ICONS from "../../asset/icons";
 import frontendRoute from "../../services/routes/frontend";
 
 function InvoiceAdded() {

@@ -7,7 +7,7 @@ function AddClient() {
         <div className="flex items-center gap-2">
           <BackButton />
           <h2 className="flex gap-2 text-lg font-medium text-gray-700">
-            Add Task
+            Add Client
           </h2>
         </div>
         <section className="mb-5">

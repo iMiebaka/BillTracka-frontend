@@ -1,4 +1,4 @@
-import ICONS from "../../assets/icons";
+import ICONS from "../../asset/icons";
 import { BackButton, MoreRouter } from "../../components";
 import frontendRoute from "../../services/routes/frontend";
 import { useContext, useEffect } from "react";

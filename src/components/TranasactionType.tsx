@@ -1,10 +1,16 @@
 import { ITTranasactionType } from "../interface/components";
 
-function TranasactionType({ style, amount, invoice, color }: ITTranasactionType) {
-
+function TranasactionType({
+  style,
+  amount,
+  invoice,
+  colorOne,
+  colorTwo,
+}: ITTranasactionType) {
   return (
     <div
-      className={`flex justify-between items-center mt-2 p-3 rounded bg-${color}-100`}
+      style={{ backgroundColor: colorOne }}
+      className={`flex justify-between items-center mt-2 p-3 rounded`}
     >
       <div>
         <p>
@@ -13,9 +19,12 @@ function TranasactionType({ style, amount, invoice, color }: ITTranasactionType)
           {style == "Overdue" && "Overdue "}
           Payments
         </p>
-        <h3 className="font-semibold text-2xl">{amount.toFixed(2)}</h3>
+        <h3 className="font-semibold text-2xl">₦{amount}</h3>
       </div>
-      <p className={`py-1 px-2 bg-${color}-600 text-white rounded-2xl`}>
+      <p
+        style={{ backgroundColor: colorTwo }}
+        className={`py-1 px-2  text-white rounded-2xl`}
+      >
         {invoice} Invoice
       </p>
     </div>

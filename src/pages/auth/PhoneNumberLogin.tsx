@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import { BackButton } from "../../components";
 import { useState } from "react";
-import ICONS from "../../assets/icons";
-import FLAGS from "../../assets/images/flags";
+import ICONS from "../../asset/icons";
+import FLAGS from "../../asset/images/flags";
 
 function PhoneNumberLogin() {
   const [payload, setPayload] = useState({

@@ -1,9 +1,10 @@
 
 export interface ITTranasactionType {
   style: "Paid" | "Unpaid" | "Overdue";
-  amount: number;
+  amount: any;
   invoice: number;
-  color: "green" | "blue" | "red";
+  colorOne?: string
+  colorTwo?: string
 }
 
 export interface ITMoreRouter {

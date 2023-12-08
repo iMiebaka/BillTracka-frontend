@@ -1,5 +1,5 @@
 import { useContext, useEffect } from "react";
-import ICONS from "../../assets/icons";
+import ICONS from "../../asset/icons";
 import { MasterContextConsumer } from "../../store/main";
 import frontendRoute from "../../services/routes/frontend";
 

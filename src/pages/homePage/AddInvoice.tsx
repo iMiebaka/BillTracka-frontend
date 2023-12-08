@@ -1,4 +1,4 @@
-import ICONS from "../../assets/icons";
+import ICONS from "../../asset/icons";
 import { AddInvoiceProgress, BackButton } from "../../components";
 import { useContext } from "react";
 import { MasterContextConsumer } from "../../store/main";

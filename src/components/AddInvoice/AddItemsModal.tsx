@@ -1,4 +1,4 @@
-import ICONS from "../../assets/icons";
+import ICONS from "../../asset/icons";
 
 interface ITProps {
   modalOpen: boolean;

@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { BackButton } from "../../components";
 import { useState } from "react";
-import ICONS from "../../assets/icons";
+import ICONS from "../../asset/icons";
 
 function EmailLogin() {
   const [payload, setPayload] = useState({

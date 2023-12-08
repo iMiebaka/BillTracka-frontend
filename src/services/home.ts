@@ -4,7 +4,7 @@ import api from "./request";
 export function addTask(data: any): Promise<any> {
   return api
     .post("/tasks", data, {
-      headers: {
+      headers: {  
         authorization: `Bearer ${COOKIE.get("token")}`,
       },
     })

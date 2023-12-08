@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { BackButton } from "../../components";
-import FLAGS from "../../assets/images/flags";
-import ICONS from "../../assets/icons";
+import FLAGS from "../../asset/images/flags";
+import ICONS from "../../asset/icons";
 import { useState } from "react";
 
 function PhoneNumberSignUp() {

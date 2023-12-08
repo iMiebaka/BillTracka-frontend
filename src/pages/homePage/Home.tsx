@@ -1,13 +1,21 @@
-import { useContext, useEffect } from "react";
-import ICONS from "../../assets/icons";
+import { useContext, useEffect, useState } from "react";
+import ICONS from "../../asset/icons";
 import { TranasactionType } from "../../components";
-import IMAGES from "../../assets/images";
+import IMAGES from "../../asset/images";
 import { MasterContextConsumer } from "../../store/main";
+import frontendRoute from "../../services/routes/frontend";
+import { maskNumber } from "../../utils";
 
 function Home() {
-  const { setRoutePath } = useContext(MasterContextConsumer);
-  useEffect(() => setRoutePath(location.pathname), []);
+  const { setRoutePath, isLoggedIn } = useContext(MasterContextConsumer);
+  const [moneyVisible, setMoneyVisible] = useState(false);
 
+  useEffect(() => {
+    setRoutePath(location.pathname);
+    {
+      !isLoggedIn && (location.href = frontendRoute.login);
+    }
+  }, []);
 
   return (
     <div className="h-screen">
@@ -33,11 +41,15 @@ function Home() {
           <div>
             <p className="text-sm font-medium flex items-center text-gray-600">
               Total Sales
-              <button>
-                <img className="px-5 flex" src={ICONS.eyeClosed} alt="" />
+              <button onClick={() => setMoneyVisible((pre) => !pre)}>
+                <img
+                  className="px-5 flex"
+                  src={moneyVisible ? ICONS.eyeOpen : ICONS.eyeClosed}
+                  alt=""
+                />
               </button>
             </p>
-            <h3 className="font-semibold text-2xl mt-3">0.00</h3>
+            <h3 className="font-semibold text-2xl mt-3">₦{!moneyVisible ? maskNumber(0.00) : 0.00.toFixed(2) }</h3>
           </div>
           <div className="flex flex-col">
             <select className="p-0.5 bg-slate-100" name="" id="">
@@ -49,22 +61,25 @@ function Home() {
 
         <section className="mt-4">
           <TranasactionType
-            amount={0.0}
+            amount={!moneyVisible ? maskNumber(0.00) : 0.00.toFixed(2) }
             invoice={0}
             style="Paid"
-            color="green"
+            colorOne="#D6FFE6"
+            colorTwo="#00A340"
           />
           <TranasactionType
-            amount={0.0}
+            amount={!moneyVisible ? maskNumber(0.00) : 0.00.toFixed(2) }
             invoice={0}
             style="Unpaid"
-            color="blue"
+            colorOne="#E6E8FE"
+            colorTwo="#0515F6"
           />
           <TranasactionType
-            amount={0.0}
+            amount={!moneyVisible ? maskNumber(0.00) : 0.00.toFixed(2) }
             invoice={0}
             style="Overdue"
-            color="red"
+            colorOne="#FED7DC"
+            colorTwo="#D1051C"
           />
         </section>
         <section className="mt-4">

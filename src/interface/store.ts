@@ -33,11 +33,25 @@ export interface ITPaymentDetails {
 }
 
 export interface ITClientInvoice {
-  shippingFee: number;
   progess: number;
-  clientDetails: ITClientDetails;
-  itemsDetails: ITItemsDetails[];
-  paymentDetails: ITPaymentDetails;
+  shippingFee: number;
+  issueDate: string;
+  dueDate: string;
+  notes: string;
+  clientName: string;
+  clientEmail: string;
+  clientPhone: string;
+  clientAddress: string;
+  clientState: string;
+  clientCity: string;
+  clientCountry: string;
+  clientLga: string;
+  status: string;
+  discount: number;
+  total: number;
+  amountPaid: number;
+  amountDue: number;
+  items: ITItemsDetails[];
 }
 
 export interface ITContextValue {

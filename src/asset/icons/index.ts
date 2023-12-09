@@ -26,6 +26,7 @@ import forwardArrow from "./forward-arrow.svg"
 import edit from "./edit.svg"
 import logout from "./logout.svg"
 import eyeOpen from "./eye-show.svg"
+import cart from "./cart.svg"
 
 
 
@@ -57,7 +58,8 @@ const ICONS = {
   forwardArrow,
   edit,
   logout,
-  eyeOpen
+  eyeOpen,
+  cart
 };
 
 export default ICONS;
